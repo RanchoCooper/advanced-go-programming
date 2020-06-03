@@ -8,13 +8,13 @@ import (
 
 func main() {
 	// 将对象类型中所有满足PRC规则的对方方法注册为RPC函数
-	err := rpc.RegisterName("HelloService", new(HelloService))
+	err := rpc.RegisterName("HelloService", new(rpc2.HelloService))
 	if err != nil {
 		log.Fatal("Register server error: ", err)
 	}
 
 	// 建立TCP连接
-	listenner, err := net.Listen("tcp", ":1")
+	listenner, err := net.Listen("tcp", ":1234")
 	if err != nil {
 		log.Fatal("Listen TCP error: ", err)
 	}
