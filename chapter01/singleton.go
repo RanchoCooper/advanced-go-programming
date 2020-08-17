@@ -1,4 +1,4 @@
-package ch01_basic
+package chapter01
 
 import (
 	"sync"
